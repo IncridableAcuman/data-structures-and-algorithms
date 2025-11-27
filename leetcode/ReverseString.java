@@ -1,6 +1,5 @@
 package leetcode;
 
-import java.util.Collections;
 import java.util.Scanner;
 //https://leetcode.com/problems/reverse-string/
 public class ReverseString {
