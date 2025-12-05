@@ -8,14 +8,21 @@ public class StraightBrackets {
         String str = scanner.nextLine();
         int k=0,t=0;
         for (int i=0;i<str.length();i++){
-            if (str.contains("(")){
+            char currentChar = str.charAt(i);
+            if (currentChar == '('){
                 k++;
-            }
-            if (str.contains(")")){
-                t++;
+            } else {
+                break;
             }
         }
-        System.out.println(k);
-        System.out.println(t);
+        for (int j=str.length()-1;j>=0;j--){
+            char currentChar = str.charAt(j);
+            if (currentChar == ')'){
+                t++;
+            } else {
+                break;
+            }
+        }
+        System.out.println(k==t);
     }
 }
